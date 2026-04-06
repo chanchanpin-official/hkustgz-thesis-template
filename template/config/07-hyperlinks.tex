@@ -27,6 +27,16 @@
   }
 }
 
+% autoref 名称（确保 \autoref 在正文中可直接使用且命名一致）
+\providecommand*{\chapterautorefname}{Chapter}
+\providecommand*{\sectionautorefname}{Section}
+\providecommand*{\subsectionautorefname}{Section}
+\providecommand*{\subsubsectionautorefname}{Section}
+\providecommand*{\figureautorefname}{Figure}
+\providecommand*{\tableautorefname}{Table}
+\providecommand*{\equationautorefname}{Equation}
+\providecommand*{\appendixautorefname}{Appendix}
+
 % 智能交叉引用（可选）
 \IfFileExists{cleveref.sty}{
   \RequirePackage{cleveref}
