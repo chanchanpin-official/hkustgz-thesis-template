@@ -24,6 +24,25 @@ Commonly used color representation methods in academia primarily include color m
 
 Compared with directly using the rectangular coordinates of $L^{*}a^{*}b^{*}$, $L^{*}C_{ab}^{*}h_{ab}$ maintains the same standard foundation and computability while reorganizing chromaticity information into a ``lightness--chroma--hue'' structure that is closer to the design context, making it more suitable for describing and comparing color scheme features in generative design proposals. Based on the above considerations, this study adopts $L^{*}C_{ab}^{*}h_{ab}$ as the primary quantitative representation space and uses $\Delta E_{ab}^{*}$ to measure color differences between design schemes. On this basis, the color parameters used in the analysis are summarized in Table~3, including $L^{*}$, $C_{ab}^{*}$, $h_{ab}$, $\Delta E_{ab}^{*}$, as well as derived indicators of contrast and harmony (the calculation formulas and implementation details of all metrics are provided in the Appendix).
 
+\begin{table}[htbp]
+\centering
+\caption{Color Attributes and Derived Metrics.}
+\label{tab:color_metrics}
+\renewcommand{\arraystretch}{1.3} % 增加行高以提高可读性
+\begin{tabular}{p{0.16\textwidth} p{0.14\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\hline
+\textbf{Color Attribute} & \textbf{Symbol} & \textbf{Definition (Brief)} & \textbf{Analytical Use in This Study} \\
+\hline
+Lightness & $L^*$ & Perceived light--dark dimension in CIELAB / CIE $L^*C^*_{ab}h_{ab}$ & Quantifies tonal layering and lightness contrast across materials and the overall composition \\
+Chroma & $C^*_{ab}$ & Colorfulness strength (radial distance in $L^*C^*_{ab}h_{ab}$ derived from $a^*, b^*$) & Captures saturation-like intensity and chroma contrast within and between elements \\
+Hue Angle & $h_{ab}$ & Hue direction on a $0^\circ$--$360^\circ$ circle in $L^*C^*_{ab}h_{ab}$ & Describes hue organization (dominant hue) and hue differences among elements \\
+Color Difference & $\Delta E_{00}$ (or $\Delta E^*_{ab}$) & Perceptual difference between two colors & Measures inter-element and inter-design color distances for comparison and clustering \\
+Contrast (Derived) & Contrast & Composite contrast metric derived from $L^*$, $C^*_{ab}$, $h_{ab}$ and/or $\Delta E_{00}$ (see Appendix) & Quantifies visual separation/tension (e.g., lightness/chroma/hue contrast) at composition level \\
+Harmony (Derived) & Harmony & Composite harmony metric based on hue relations and lightness--chroma coordination (see Appendix) & Quantifies perceived coherence/coordination of the overall color scheme \\
+\hline
+\multicolumn{4}{p{0.98\textwidth}}{\footnotesize *Definitions follow the CIE 1976 CIELAB / $L^*C^*_{ab}h_{ab}$ framework, and color differences are measured using the CIEDE2000 ($\Delta E_{00}$) formulation; contrast and harmony are derived metrics defined in Appendix.} \\
+\end{tabular}
+\end{table}
 
 
 \subsection{Colour Harmony}
