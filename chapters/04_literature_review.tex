@@ -18,7 +18,36 @@ Design studies commonly distinguish a layered colour composition strategy consis
 
 \subsection{Colour Space and Color Attributes}
 
-To support rigorous analysis, colour should be represented in a formal colour space (e.g., RGB, HSV/HSL, CIELAB). Across spaces, three core attributes recur: hue, saturation/chroma, and lightness/value. Prior work suggests that these attributes contribute differently to perception: hue often drives categorical meaning, saturation influences vividness and arousal, and lightness affects clarity, softness, and visual weight. Explicit parameterization of these attributes enables reproducible stimulus construction and interpretable statistical comparison.
+To support rigorous analysis, colour should be represented in a formal colour space (e.g., RGB, HSV/HSL, CIELAB). In this study, we adopt the CIE $L^\ast a^\ast b^\ast$ (CIELAB) framework because it keeps metric comparability while making perceptual interpretation clearer for floral-material colour analysis.
+
+Commonly used colour representation methods in design research include color models, color spaces, and practical color-order systems. Compared with directly using raw RGB coordinates, CIELAB better separates perceptual dimensions and supports quantitative comparisons across generated designs.
+
+\begin{table}[htbp]
+  \centering
+  \begin{threeparttable}
+    \caption{Color attributes and derived metrics.}
+    \label{tab:color_metrics}
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabularx}{0.96\textwidth}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}X}
+      \toprule
+      \textbf{Color Attribute} & \textbf{Symbol} & \textbf{Definition (Brief)} & \textbf{Analytical Use in This Study} \\
+      \midrule
+      Lightness & $L^\ast$ & Perceived light--dark dimension in CIELAB & Quantifies tonal layering and lightness contrast across materials and the whole composition. \\
+      Chroma & $C^\ast_{ab}$ & Colorfulness strength derived from $a^\ast, b^\ast$ & Captures saturation-like intensity and chroma control of floral palettes. \\
+      Hue angle & $h_{ab}$ & Hue direction on a $0^\circ$--$360^\circ$ circle in $a^\ast$--$b^\ast$ plane & Describes hue organization (dominant hue) and hue differences among design elements. \\
+      Color difference & $\Delta E_{00}$ & Perceptual distance between two colors & Measures inter-element and inter-design color distances for comparability checks. \\
+      Contrast (derived) & Contrast & Composite contrast from $L^\ast$, $C^\ast_{ab}$, $h_{ab}$ and/or $\Delta E_{00}$ & Quantifies visual separation and salience in generated outcomes. \\
+      Harmony (derived) & Harmony & Composite harmony metric based on hue/lightness/chroma relations & Quantifies perceived coherence and compatibility of multi-color compositions. \\
+      \bottomrule
+    \end{tabularx}
+    \begin{tablenotes}[flushleft]
+      \footnotesize
+      \item Definitions follow the CIE 1976 CIELAB framework; color-difference values use CIEDE2000 where applicable.
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+As shown in \autoref{tab:color_metrics}, combining base attributes and derived metrics enables reproducible color characterization and supports linking computational descriptors with human evaluation.
 
 \subsection{Colour Harmony}
 
