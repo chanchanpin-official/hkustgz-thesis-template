@@ -18,6 +18,16 @@
   pdfpagelayout=OneColumn,% 单栏布局
 ]{hyperref}
 
+% autoref 名称（即使未加载 cleveref 也可用）
+\providecommand*{\chapterautorefname}{Chapter}
+\providecommand*{\sectionautorefname}{Section}
+\providecommand*{\subsectionautorefname}{Section}
+\providecommand*{\subsubsectionautorefname}{Section}
+\providecommand*{\figureautorefname}{Figure}
+\providecommand*{\tableautorefname}{Table}
+\providecommand*{\equationautorefname}{Equation}
+\providecommand*{\appendixautorefname}{Appendix}
+
 % PDF 元数据设置
 \AtBeginDocument{
   \hypersetup{
