@@ -1,22 +1,67 @@
 % ============================================================
-% Literature Review - Example Template
-% 文献综述 - 示例模板
+% Literature Review
 % ============================================================
-% Replace this example content with your own literature review.
-% 将此示例内容替换为您自己的文献综述。
 
-\section{Related Field A}
+\section{Conceptual Framing}
 
-This is an example literature review chapter. Replace this content with your own review of relevant research.
+This chapter reviews theories and empirical studies that explain how colour design in floral gift contexts can influence users' emotions and downstream intentions. The review is organized around three layers: (1) colour as a perceptual and compositional design factor, (2) emotion as the core psychological mechanism, and (3) behavioral intentions as outcome variables. Finally, this chapter translates prior work into a concrete research design that combines generative image conditions with quantitative and qualitative measures.
 
-Start by discussing the foundational work in your field. Cite key papers using the \texttt{\textbackslash cite\{\}} command, for example: \cite{example_reference_1, example_reference_2}.
+\section{Colour}
 
-\section{Related Field B}
+\subsection{Colour as a Focal Design Factor}
 
-Continue with a discussion of other relevant research areas. Compare and contrast different approaches, highlighting their strengths and limitations.
+Colour is one of the earliest and most salient visual cues processed by viewers. In product and interface evaluation, colour can rapidly shape first impressions, perceived quality, and affective tone before semantic interpretation is complete. In floral gift design, colour is especially central because flowers are already culturally encoded through hue-symbol associations (e.g., romance, celebration, sympathy), making colour choices both aesthetic and communicative.
 
-\section{Research Gap}
+\subsection{Primary--Secondary--Accent Structure}
 
-After reviewing the existing literature, identify the gap that your research addresses. What limitations exist in current approaches? What opportunities for improvement have not been explored?
+Design studies commonly distinguish a layered colour composition strategy consisting of primary, secondary, and accent colours. The primary colour establishes the dominant atmosphere, the secondary colour supports balance and depth, and the accent colour guides attention to focal elements. This structure helps avoid monotony while preserving coherence, and it provides an operational basis for manipulating colour configurations in controlled experiments.
 
-This section should naturally lead to your proposed methodology in the next chapter.
+\subsection{Colour Space and Color Attributes}
+
+To support rigorous analysis, colour should be represented in a formal colour space (e.g., RGB, HSV/HSL, CIELAB). Across spaces, three core attributes recur: hue, saturation/chroma, and lightness/value. Prior work suggests that these attributes contribute differently to perception: hue often drives categorical meaning, saturation influences vividness and arousal, and lightness affects clarity, softness, and visual weight. Explicit parameterization of these attributes enables reproducible stimulus construction and interpretable statistical comparison.
+
+\subsection{Colour Harmony}
+
+Colour harmony concerns perceived compatibility among multiple colours in a composition. Classical harmony schemes (analogous, complementary, triadic, split-complementary, monochromatic) offer practical heuristics, while contemporary studies emphasize context dependence and user preference heterogeneity. In floral gift design, harmony is not only about formal balance but also about situational appropriateness; therefore, this thesis treats harmony as both a compositional property and a context-sensitive evaluation dimension.
+
+\section{Emotion}
+
+\subsection{Colour Imagery in Context}
+
+Colour-evoked imagery is shaped by context, culture, and task. The same hue can signal different meanings across gifting scenarios (e.g., birthday, gratitude, apology, condolence), and these meanings can moderate emotional responses. Rather than assuming universal colour-emotion mappings, recent literature recommends contextualized interpretation and scenario-based testing.
+
+\subsection{Emotion Alignment}
+
+Emotion alignment refers to the degree to which a design's affective tone matches the intended message and usage context. In this thesis, alignment functions as a key mediating mechanism: when colour composition aligns with intended emotion, users are more likely to perceive the design as appropriate, attractive, and trustworthy. Misalignment, by contrast, may increase ambiguity and reduce evaluative confidence.
+
+\section{Intentions}
+
+\subsection{Design Attractiveness}
+
+Design attractiveness captures immediate evaluative appeal and is frequently linked to approach-oriented responses. In human-computer interaction and consumer research, attractive visuals can increase willingness to explore, perceived usability, and overall satisfaction. For floral gifts, attractiveness is expected to be a proximal outcome of successful colour-emotion design.
+
+\subsection{Adoption Intentions}
+
+Adoption intention represents users' willingness to select, recommend, or use a generated design. Prior studies indicate that adoption intentions are jointly determined by aesthetic quality, emotional resonance, perceived fit to purpose, and trust in the design process. This thesis models adoption intention as a downstream variable influenced by colour composition and emotional alignment, directly and indirectly through attractiveness.
+
+\section{Research Design}
+
+\subsection{Floral Gift Design as Research Context}
+
+Floral gift design provides an ecologically valid context where colour decisions are central and emotionally consequential. Compared with abstract palettes, floral compositions allow participants to evaluate colour in relation to recognizable forms, occasions, and social intentions.
+
+\subsection{Quantitative Measures and Task Design}
+
+The quantitative component uses structured rating tasks to measure perceived harmony, emotional alignment, attractiveness, and adoption intention. Stimuli are presented under controlled conditions, and measurement items are adapted from prior design, UX, and consumer-intention scales. This setup enables hypothesis testing on the relationships among colour features, emotion, and intention outcomes.
+
+\subsection{Colour Representation \& Measurement}
+
+Colour conditions are operationalized with explicit parameter controls and recorded metadata, enabling reproducibility across generated designs. Attribute-level measurements (hue, saturation/chroma, lightness/value, and contrast distribution) are paired with subjective ratings to connect computational descriptors and human perception.
+
+\subsection{Qualitative and Mixed-Methods for Contextual Emotion and Usability}
+
+Because emotional interpretation is context-sensitive, qualitative feedback (open-ended responses and brief interviews) complements quantitative scores. A mixed-methods strategy helps explain why specific colour compositions succeed or fail in different gifting scenarios and provides richer guidance for design iteration.
+
+\subsection{Generative Systems: Controllability \& Bias}
+
+Recent generative systems expand creative exploration but introduce concerns around controllability, consistency, and embedded aesthetic bias. This thesis therefore documents prompt and parameter settings, evaluates controllability at the attribute level, and reflects on possible dataset- or model-induced bias in colour outcomes.
