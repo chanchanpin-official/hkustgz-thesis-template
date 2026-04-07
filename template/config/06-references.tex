@@ -4,7 +4,7 @@
 
 % 加载 biblatex（深度定制以符合 IEEE 及学校要求）
 \RequirePackage[
-  backend=biber,
+  backend=bibtex,       % Overleaf 兼容性优先：使用 bibtex 后端
   style=ieee,           % 基础使用 IEEE 样式
   citestyle=numeric-comp,
   sorting=none,         % 按引用顺序
@@ -70,6 +70,7 @@
 % ------------------------------------------------------------
 % 5. 兼容性与细节微调
 % ------------------------------------------------------------
+\DeclareRobustCommand{\citep}[2][]{\parencite[#1]{#2}}
 \DeclareRobustCommand{\citet}[2][]{\textcite[#1]{#2}}
 
 % 确保方括号内编号正确对齐
