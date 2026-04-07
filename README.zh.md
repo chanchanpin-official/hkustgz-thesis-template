@@ -69,7 +69,7 @@
 
 - [TeX Live](https://tug.org/texlive/)（2023 或更新版本）或 [MiKTeX](https://miktex.org/)
 - XeLaTeX 编译器
-- Biber 文献处理工具
+- BibTeX 文献处理工具
 
 ### Overleaf 设置
 
@@ -79,6 +79,7 @@
 2. 点击左上角 **菜单**
 3. 将 **编译器** 从 "pdfLaTeX" 改为 **"XeLaTeX"**
 4. 重新编译项目
+5. 如果仍显示 citation key（而不是编号），到 **Logs and output files** 中确认是否出现 `bibtex` 报错；若有 `.bib` 条目格式错误（如 `author = {, ...}`），Overleaf 会跳过文献生成。
 
 ### Overleaf 中文渲染（常见问题排查）
 
@@ -105,12 +106,43 @@
 ```bash
 # 使用 XeLaTeX 编译（运行 3 次以生成交叉引用）
 xelatex main.tex
-biber main
+bibtex main
 xelatex main.tex
 xelatex main.tex
 ```
 
 或者使用 VS Code 的 LaTeX Workshop 配置。
+
+> 注意：如果没有运行 `bibtex main`，引用会显示为类似 `[dietzCompleteLanguageFlowers2022,JiaJunZhiWuYiXiangYanJiu2011]` 这样的 key，且参考文献列表可能为空。
+
+本仓库已新增 `latexmkrc`，会强制使用 `XeLaTeX + bibtex`。如果你用 `latexmk`，建议直接运行：
+
+```bash
+latexmk main.tex
+```
+
+### 引用/参考文献常见问题排查
+
+1. **正文里看到的是 key，不是编号**
+   - 典型表现：`[dietzCompleteLanguageFlowers2022,JiaJunZhiWuYiXiangYanJiu2011]`
+   - 原因：`bibtex` 没有执行成功，或辅助文件缓存过旧。
+
+2. **参考文献列表没有显示**
+   - 先确认正文至少有一个 `\cite{...}`。
+   - 再执行完整编译链（XeLaTeX → BibTeX → XeLaTeX → XeLaTeX）。
+
+3. **建议先清理缓存再重编译**
+
+```bash
+rm -f main.aux main.bbl main.bcf main.blg main.run.xml main.toc main.out
+xelatex main.tex
+bibtex main
+xelatex main.tex
+xelatex main.tex
+```
+
+4. **参考文献位置说明**
+   - 本模板默认将参考文献放在附录之前（`main.tex` 中 `\printthebibliography` 位于 `\appendix` 之前）。
 
 ### 配置
 
@@ -192,7 +224,7 @@ xelatex main.tex
 
 ```latex
 \RequirePackage[
-  backend=biber,
+  backend=bibtex,
   style=ieee,        % 可改为：numeric、authoryear、apa 等
   ...
 ]{biblatex}
