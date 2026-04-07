@@ -1,0 +1,425 @@
+本论文贡献了跨学科的系统、见解，评估以色彩代表的美学风格因素在生成式人工智能生产流程里影响生成结果情绪契合度的作用机制，以在提供在设计实践中提升用户采纳意愿的建议。为建立一套可复用的概念口径与评估路径，本章首先在2.1节对本研究反复使用的关键术语进行界定，并在后续章节对核心概念进行深入探讨和研究现状综述。
+
+\section{Conceptual Framing}
+
+研究范围上，本研究聚焦“生成式AI（GenAI）驱动花礼设计”这一具体应用场景，核心研究变量体系围绕GenAI Design评估的“基础问题—机制问题—应用验证”的研究路径展开，本章依照支撑该路径的3个核心领域组织文献综述与定义框架，即影响用户情绪契合感知上游设计变量的2.2颜色，关联用户反应的中介评价机制2.3 情绪，用于评估和改进设计的指标2.4 用户意愿。本章将通过综述被纳入研究变量的关键概念，来构建这一跨学科概念链条。
+
+本节首先回顾色彩（Colour）何以能够作为一种相对可控、可解释且可操作化的情绪线索。本文并不将“颜色”视为单一视觉印象，而是将其拆解为可进入设计分析与生成评估的若干候选维度，包括配色结构、颜色属性及其组合关系。具体地，本文首先综述1-a）色彩如何作为一种重要的设计要素，借助 1-b）“主-辅-点缀色”（Primary–Secondary–Accent）的配色层级结构来刻画配色结构，贴近真实设计过程，并结合1-c）Color Attributes（例如CIE L*C*h° 及 ΔE 等参数）的可计算指标对花材与方案进行量化表征，为评估情绪契合提供可比较的输入变量。此外，为了确保这些色彩指标提取、比较与分析的方法流程稳定同一，本文遵照1-d）Colour Representation and Measurement中规定的色彩提取流程和基本测量口径，并依据1-e）Colour Harmony等综合指标对GenAI设计结果进行评估，为后续对情感表达、设计吸引力及采纳意向差异的解释提供补充依据。另外，设计吸引力不只受色彩这一单一因素影响——形式、材质、构图与风格等因素同样可能塑造用户反应。但本文将色彩作为假设中最核心的上游变量之一（见1.4节），是因为在 GenAI 驱动设计中，colour 相较于其他美学因素具有更高的可解释性、可操控性与可操作化潜力；同时，在花礼设计这一强调情绪传达与语境匹配的应用场景中，颜色也是最直接、最稳定的感知线索之一。
+
+情绪（Emotion）是本文研究问题中的核心中介领域，主要用于解释由色彩特征触发的感知与评价如何进一步转化为用户对设计结果的整体判断。这是因为产品的设计特征对用户后续评价的影响，往往并非通过单一的直接路径发生，而是会先经过一个与意义理解和情感评估相关的中间层（详见2.3节）。本文对Emotion的讨论围绕这一中间层和设计最相关的两个概念，即 2-a）Colour Imagery in Context 与 2-b）Emotion Alignment：前者强调，花礼设计中的色彩并非仅以单一颜色属性被感知，而是通过配色组合形成具有特定情绪指向的色彩意象，并在具体送礼关系、使用场景与目标用途的语境中被理解和解释；后者则进一步指向生成式AI设计结果在情绪表达上与用户预期、情境需求及目标用途之间的一致程度，用以刻画设计输出是否实现了与目标情绪相匹配的表达效果。基于后续研究中对情绪相关变量进行界定、测量与评估的需要，本文有必要从色彩意象、情境解释及设计结果评价等相关研究中梳理能够支撑本研究的概念基础，以为后续情绪相关变量的操作化与评估框架提供依据。
+
+用户意愿（Intentions）是本文理论路径中的关键下游构念之一，用于刻画用户对生成式AI设计结果从“感知与评价”走向“选择与采纳”的转化过程。涉及到本文中两个的概念：其一是3-a）设计吸引力（Design Attractiveness），用于衡量用户对设计成果的整体审美评价与偏好强度，强调花礼作为情感性消费品时，花材组合、配色与整体风格等外观线索如何形成“第一印象”并驱动好感；其二是3-b）采纳意愿（Adoption Intentions），用于衡量用户在特定送礼情境下对该设计方案的实际选择倾向与使用/购买意图，作为本文最终的目标（target）行为指标。在本文中，设计吸引力讨论的范畴和直接的审美反应相关，而采纳意愿被视为下游行为结果，这两个概念在链路上相互衔接但在评估口径中独立——用户的采纳意愿、或者进一步的消费者购买行为，并不单一取决于本文讨论的设计吸引力，这一点会在2.4节做进一步说明。
+
+这些核心概念的清晰界定与科学操作化，既是回应第一章提出的“色彩-情绪-行为”关联研究缺口的核心前提，也是后续验证相关研究假设、拆解理论路径、提炼研究结论的重要操作依据，更是衔接理论研究与实践应用的关键纽带。表1梳理了2.2-2.4节涉及到的核心概念、基本含义，及其在本文研究路径中的衔接关系或是作用。并在本章后续的段落进行相关概念的明晰和综述。
+
+% Table 1 Key concepts, working definitions, and their relevance to this thesis.
+
+\section{Colour}
+
+颜色是视觉感知中最具情绪唤起力的要素之一，其相关研究跨越心理学、美学与设计学（Berlyne, 1971；Schloss \& Palmer, 2011）。一直以来，颜色特征都是学界研究美学风格与设计评估的重要量化指标。在设计吸引力与情绪契合的研究中，颜色不仅作为美学变量，也是一种可测量的情感线索。本节将讨论啊a）为什么将色彩作为评估GenAI设计的重要变量之一（见2.2.1节）；另外，为了便于理解人们如何理解人工或AI生成的花艺设计作品的配色，本文需要引入b）学界和设计实践中分析配色设计过程的方法（见2.2.2节）和c）色彩的基本属性和一种量化色彩为可操作参数的方法（见2.2.4、2.2.5节）。
+
+\subsection{Colour as a Focal Design Factor}
+
+正如 Section 2.1 已经提及的，设计风格、构成（设计学上）、寓意（在花艺设计中体现为花语等）都会影响用户感知，但本文选择 colour 作为 focal variable，原因有二。首先，是色彩自身的重要性。
+
+既有研究通常以一种多层次的体验观将产品的用户体验区分为若干彼此关联的层面。例如，Desmet and Hekkert（2007）将 product experience 概括为 aesthetic experience、experience of meaning 和 emotional experience；Norman（2004）的 emotional design 框架则将产品体验对应为 visceral、behavioral 与 reflective 三个层次；Crilly et al.（2004）则从消费者对产品视觉形式的反应出发，将其归纳为 aesthetic、semantic 和 symbolic 三类；相关产品情绪研究的整合性综述也表明，设计体验并非单纯的感官判断，而是同时涉及知觉、认知解释与情绪反应的多层结构（Desmet \& Hekkert, 2007；Crilly et al., 2004；Vaidya \& Kalita, 2021）。
+
+色彩在上述体验维度中横跨了审美感知、情绪反应与对象判断等多个层面。首先，在审美感知层面，色彩本身就是视觉设计中最直接、最显著的刺激之一。在探讨早期决策与知觉加工的宏观视域下，相关研究已表明，色彩会显著影响用户的初始判断、交互方式及后续认知加工，因此并非附着于形式表面的次要变量，而是早期整体印象形成中的关键线索（Singh, 2006；Bonnardel et al., 2011；Moshagen \& Thielsch, 2010）。与此同时，更具体的知觉研究进一步指出，色彩并不只是对象表面的附加属性，而会实质参与对象组织与早期视觉加工；在关于 shape 与 color 的微生成研究中，二者被视为共同参与对象知觉建构的重要因素，而在图底知觉研究中，颜色也会显著影响 figure-ground perception 与前景化判断（Pinna \& Reeves, 2011；Hansen et al., 2017；Song et al., 2024）。因此，色彩绝非附着于形式表面的次要修饰，而是在对象被知觉和评价的起始阶段即参与整体印象的形成，并为后续的审美偏好与评价提供基础。
+
+色彩还会进一步引发 emotional response，并影响个体对对象的整体判断。置于情境认知与心理测量视域下，色彩不仅是物理刺激，更是携带情感语义的心理线索，其影响可延伸至 affect、cognition and behavior；相关研究也表明，色彩属性能够稳定对应若干情绪维度，并在此基础上影响更综合的 appraisal 过程（Elliot \& Maier, 2014；Ou et al., 2004）。更重要的是，在具体的交互与消费情境中，这种底层反应会进一步外化为更高阶的评价结果；例如，colour appeal 已被证明会显著影响用户对对象的 trust 与 satisfaction，而视觉美感本身也与 perceived usability、pleasure 等判断密切相关（Cyr et al., 2010；Moshagen \& Thielsch, 2010）。在 consumer-oriented design 中，这种作用还会进一步外化为对产品评价与选择的影响，例如颜色与温度联想的一致性会影响 product evaluation，而包装色彩也会影响消费者对健康性、可持续性与口感等属性的判断（Ketron \& Spears, 2020；Hallez et al., 2023）。这意味着色彩不仅关乎“视觉美丑”，也会通过情绪与认知联动影响对象被感知为亲切或冷淡、可靠或低质，并进一步主导评价与选择。
+
+在 consumer-oriented design 中，色彩的作用并不止于审美功能，还会进一步进入消费者对产品属性与象征意义的判断，并外化为对产品评价与选择的影响（Bloch, 1995；Hallez et al., 2023；Ketron, 2020）。Crilly et al. 指出，colour是贯穿aesthetic、semantic 与 symbolic三维度的主动沟通媒介，，其设计需兼顾生理感知规律、认知惯性、文化脚本与形式整合性（Crilly et al., 2004）。因此，就本文而言，将 colour 作为 focal variable，并不是否认风格、构成或寓意的重要性，而是因为色彩本身已经能够跨越审美感知、情绪反应与对象判断这几个关键层面，并为后续关于可解释性、可操控性与可操作化的讨论提供更清晰的切入口。
+
+\subsection{Primary–Secondary–Accent Structure}
+
+设计学科的配色过程多继承自20世纪初包豪斯基础设计教育体系提出的色彩构成，这一思想旨在通过对色相、明度与饱和度的组织，探索视觉元素之间的秩序与和谐（Itten, 1961; Albers, 1963）。这一体系逐渐发展出了多种配色模型与实践方法，如互补配色、类似配色与三角色环配色等（Itten, 1961），这些模型以色相环为基础，通过色差与对比规律指导设计师实现视觉的统一与变化（Stone et al., 2008; Lidwell et al., 2010; Wong, 1997; Birren, 1987; Johansson \& Thompson, 2007; Bohm, 2011）。
+
+\begin{figure}[htbp]
+
+  \centering
+
+  % TODO: insert figure file
+
+  % \includegraphics[width=0.9\textwidth]{figures/your_figure_file}
+
+  \caption{Figure 8 42-44 Harmonious proportions of area for complementary colors: Yellow : Violet = 1/4 : 3/4 Orange : Blue = 1/3 : 2/3 Red : Green = 1/2 : 1/2 45 Circle of primary and seondary colors in harmonious proportion 46 Equal proportions of red and green 47 A little red with a great deal of green makes the red highly activeSource: Based on the Itten Contrast Guide (course project), Digital Color Theory course materials, UC Berkeley Extension. Retrieved from https://colorwithlara.wordpress.com/}
+
+  \label{fig:figure_8_42_44_harmonious_proportions_of}
+
+\end{figure}
+
+另外，除了以色彩关系与对比原则为核心的构成式配色方法外，还有从设计隐喻、图像参考等设计实践过程出发进行的配色方法。比如，基于色彩意象的关键词–语义映射法（Kobayashi, 1992; Ou et al., 2004; Ou et al., 2012; Gao \& Xin, 2006），图像采样与色彩提取法（Lertrusdachakul et al., 2019; Achanta et al., 2009; Gao et al., 2025; Kynash \& Semeniv, 2025），以及基于语义与数据融合的生成式配色法（Hu et al., 2018; Bahng et al., 2018; Qiu et al., 2022; Lin et al., 2021）。但无论基于色彩现象还是设计实践，上述方法大多最终呈现为主要颜色-次要颜色的组合（Itten, 1961; Birren, 1987; Wong, 1997; Stone et al., 2008; Lidwell et al., 2010），这一配色方法论在数字化界面设计等领域被进一步强调，如Google’s Material Design Guidelines提出的Primary Color-Secondary Color-Accent Color，首次将这一方法以工程化标准发布，本文借用了类似的概念，在这里使用“主–辅–点缀色（dominant–subdominant–accent）”这一描述来分析人工或AI生成的花艺设计作品。本文对这三者对定义如下：
+
+the Dominant Colour指画面中面积第一大的颜色，在设计考量中决定整体的视觉基调与情感氛围，体现设计作品的核心意象；
+
+The Subdominant Colour 指画面中面积第二大的颜色，在设计考量中的作用有支撑主色、提供对比以增加视觉趣味和深度等；
+
+The Accent Colour 指相对面积最小的颜色，但通常上在视觉上最引人瞩目。在设计考量中一般有创造视觉焦点，吸引用户注意力的功能。
+
+映射到对花艺设计结果进行分析，“dominant–subdominant–accent”的配色结构往往和花礼采用的主花材、副花菜、补花材相关，它们对应着一种花材占据花礼作品用到的总量中的分量，一定程度上影响着色彩的面积对比，但因花材种类而已。比如，红玫瑰作为花礼设计中的一种常用主花，其花礼作品的dominant colour 则趋于与花瓣颜色一致（玫瑰红色），但如果采非洲菊作为主花，其巨大的花盘会导致花瓣的色彩对dominant colour影响降低。
+
+\subsection{Colour Space and Color Attributes}
+
+为量化花材与整体设计方案的色彩特征，本文采用 CIE 形式对颜色进行参数化表征，并以明度 、彩度 、色相角 及色差 作为核心色彩指标，用于量化花材与整体设计方案的色彩特征。CIELAB（CIE 1976 ）是 CIE 于 1976 年推荐的均匀色彩空间（Uniform Color Space, UCS），尽管在实际应用中它仍仅为近似感知均匀；其中 表示明度， 表示红—绿维度（redness–greenness）， 表示黄—蓝维度（yellowness–blueness）；而 是 CIELAB 的极坐标形式，将 转换为 （彩度）与 （色相角），分别表征颜色的感知彩度与色相。
+
+学界常用的颜色表征方式主要包括颜色模型、色彩空间，以及用于专业颜色沟通的色彩秩序系统或实用工具；不同表征方式适用于不同的研究与应用场景。相关内容通常可区分为 colour models（如 RGB、CMYK）、colour spaces（如 CIELAB、CIELUV），以及 color order systems（如 Munsell、NCS）与基于 的色差度量方法。
+
+相较于直接使用 的直角坐标形式， 在保持同一标准基础与可计算性的同时，将色度信息重组为更接近设计语境的“明暗—彩度—色相”结构，因此更适合用于描述和比较生成式设计方案中的配色特征。基于上述考虑，本文选用 作为主要量化表征空间，并以 对方案间色彩差异进行度量；在此基础上，进一步提取 、、、 以及由其派生的对比度与和谐度指标，形成后续分析所使用的统一色彩参数体系。
+
+基于上述考虑，本文选用 L*C*h° 作为主要量化表征空间，并以 ΔE 对方案间色彩差异进行度量。在此基础上，本文将用于分析的色彩参数汇总如 Table 3 所示，包括 L*、C*、h°、ΔE 以及由其派生的对比度与和谐度指标（各指标的计算公式与实现细节见附录）。
+
+\begin{figure}[htbp]
+
+  \centering
+
+  % TODO: insert figure file
+
+  % \includegraphics[width=0.9\textwidth]{figures/your_figure_file}
+
+  \caption{Table 3 Summary of Color Parameters Used in This Study}
+
+  \label{fig:table_3_summary_of_color_parameters_used}
+
+\end{figure}
+
+% *Definitions follow the CIE 1976 CIELAB / L*C*ab hab framework, and color differences are measured using the CIEDE2000 (ΔE00) formulation; contrast and harmony are derived metrics defined in the Appendix.
+
+\subsection{Colour Harmony}
+
+颜色为什么不该被当成孤立的视觉变量来看
+
+你不是想说“粉色=浪漫、蓝色=冷静”这么简单，而是想强调，用户感知到的不是单个颜色，而是“配色组合形成的整体意象”。
+
+为什么同一种颜色意象会随情境变化
+
+你这里想引入的是“context”这个维度，也就是花礼设计里的关系、场景、用途会改变人对颜色的解释。
+
+比如同样的粉白色，在生日、表白、探病、商务送礼里，传达出来的感觉不会完全一样。
+
+为什么颜色意象可以作为情绪契合的上游机制
+
+你整篇论文的逻辑不是“颜色直接决定采纳意愿”，而是：
+
+colour features -> colour imagery in context -> perceived emotion alignment -> design attractiveness / adoption intention
+
+所以这一节本来是在做中间这一步，把“客观颜色特征”过渡成“用户主观感受到的情绪意义”。
+
+为什么你的研究要在具体应用场景里研究颜色
+
+你选的是 floral gifting，不是抽象视觉实验。所以这一节其实也在为你的研究设计辩护：
+
+颜色的作用必须放到真实消费语境里看，脱离送礼对象、场合和用途，就没法讨论“情绪契合”。
+
+为后面变量操作化做铺垫
+
+这节还承担一个方法论作用：告诉读者，后面你测的不是抽象 emotion，而是“在特定语境中，被配色组合激发和解释出来的情绪意象”。
+
+也就是说，它是在帮你把后面的 emotion alignment 定义得更具体、更可测。
+
+一句话概括：
+
+你写 2.3.1 Colour Imagery in Context，本来是想说明“颜色如何在具体送礼语境里被解释为某种情绪意象”，并把它作为连接 colour features 和 emotion alignment 的关键理论中介。
+
+\section{Emotion}
+
+\subsection{Colour Imagery in Context}
+
+\subsection{Emotion alignment}
+
+区别于AI领域中的Alignment problem，在本文中Emotion alignment 是一个更加综合、实践导向的问题。它具体指在生成式AI在设计流程中，其产出结果能够在情绪表达与用户的期望和需求中隐含的情绪预期相一致的过程。这一契合既体现在用户意图理解与生成策略中，也体现在最终成果的情绪体验效果上。在1.3节我简单讨论了理解情绪信息在设计语境中的重要意义，以及为什么Emotion alignment对于GenAI设计成果的表现至关重要。这一过程在用户意图理解、GenAI生产策略和设计结果评估的各个环节都有所参与。但情绪契合在不同的学科领域的表现方式和理论基础都不仅相同，作为一个跨学科的研究，我们将简单回顾不同学科领域下的相关研究，并得到一个符合本研究scope的定义。
+
+首先，我想从技术实现的环节追溯一下情绪契合过程在AI生产流程里的具体实现，虽然用户对 GenAI 设计的情绪反应是一个新兴的研究议题，但其理论基础可以追溯到 1995 年 Rosalind Picard 提出的“情感计算”框架。该框架强调计算机需要具备识别、理解、表达和适应人类情绪的能力，从而为后续情绪分析研究奠定了根基 (Kleine-Cosack, 2006; Picard, 1997)。在这一框架下，2010s的研究提出关注以情绪词典的构建作为自然语言情绪分析的重要突破口。情绪词典的构建是情感分析的重要组成部分，研究人员采用手动和自动方法来扩展情感词汇，以提高情绪分类的准确性。继 2003 年 NNLM 模型提出（Bengio 等人，2003 年，2010 年）之后，神经网络语言模型经历了长足的发展。当前的AIGC系统在处理用户指令和生成内容时主要依赖于基于Transformer的架构（BERT和RoBERTa等）（Vaswani et al.， 2017;Devlin 等人，2019 年;Y. Liu 等人，2019 年）。这些模型迭代显着提高了人工智能在处理自然语言处理 （NLP） 和相关任务方面的性能。回到 GenAI 设计的语境，AIGC 系统通常通过语义向量检索与素材库调用来增强生成能力。具体而言，用户的自然语言输入会经由预训练模型（如 BERT、CLIP）编码为语义与情绪向量，而设计素材库中的元素（如纹理、配色方案）同样被嵌入至同一向量空间。模型通过计算向量相似度，检索出最契合用户意图的组件，并将其作为扩散或渲染过程中的条件输入或可组合模块。这一机制不仅确保了生成结果与用户指令的匹配性，同时赋予其符号学层面的情绪意义。
+
+在一个更大尺度的语境下，Emotion alignment在审美心理学、色彩与消费者心理等领域均有其映射。早期审美心理学的一些代表性研究从生理机制层面提出了色彩等感官信号和情绪反应之间的关系，并强调了刺激节律、审美体验和个体差异等中介作用(Allen, 1877; Clay, 1908)。进一步的，二十世纪早期的研究强调，审美情感的核心在于外部形式与内部感受之间的契合关系。例如，Lipps (1903, 1906) 认为“‘美’基本上应该被理解为‘一个对象在我内心产生特定效果的能力的名称’” ，其提出的“移情理论”（Einfühlung / empathy theory）强调，个体会将自身的情绪与身体感受投射到外部形式之中，从而在自我与对象之间建立情绪一致性。Lee 和 Anstruther-Thomson (1912) 的sympathy theory (empathy theory of form) 则进一步指出，诸如线条、色彩和姿态等形式特征能够唤起观者已有的情绪经验，从而产生审美愉悦。这些研究共同揭示了审美体验建立在形式特征与内在情绪框架契合的基础之上。
+
+在此基础之上，20 世纪的实验美学研究进一步尝试以实验范式和量化指标来验证这一“情绪契合”机制。Berlyne (1971, 1974) 提出的“唤醒潜能”理论指出，刺激的复杂性、新奇性和不确定性会通过调节唤醒水平而影响审美快感，通常呈现倒 U 型关系。后续研究表明，审美体验不仅依赖于感知特征本身，还取决于其与观者既有认知和情绪框架的契合程度（Martindale et al., 1990; Silvia, 2005, Thomas Petraschka. 2023）。进入认知美学阶段，Leder 等人 (2004) 的美学加工模型更系统地揭示了这一过程，将审美体验拆解为感知分析、隐含意义建构、情绪唤起和元认知评估等多个阶段，强调在各个层面上外部刺激与内部情绪框架的匹配。
+
+这种对“契合”过程和审美心理的原理性认识，之后延伸到被到消费心理与包装研究领域。特别是在色彩与视觉设计中，大量实证研究表明，包装的色彩与形态能激发稳定的情绪联想，并通过与消费者预期的契合来提升产品评价、感知质量与购买意图（Hemphill, 1996; Reimann et al., 2010; Chitturi et al., 2007, 2022; Su \& Wang, 2024）。
+
+类似的概念常被引入到设计学研究中，具体表现为设计成果在情绪表达层面与用户的心理状态、需求和语境保持一致 (Desmet, P., \& Hekkert, P.,2007, Jordan, P. W.,2000)。设计研究长期强调，产品与界面不仅承担功能任务，也传递情绪与意义（Norman, 2004）。因此，评估设计优劣时，除了功能性与可用性，设计是否能够在情绪层面与用户形成一致，逐渐成为核心维度之一（Desmet \& Hekkert, 2007）。体验设计的观点为这些目标赋予了框架：Hassenzahl (2010) 指出，用户体验不仅包括“实用性”（pragmatic quality），更包括“享乐性”（hedonic quality），而后者往往取决于设计与用户情绪预期的契合程度。当设计元素在色彩、形态、交互反馈等方面能够与用户的心理状态和使用场景保持一致时，用户更容易产生被理解和共鸣的体验，从而提升信任与满意度。相反，若设计传递的情绪与用户语境相冲突，则可能造成情绪不一致（emotional incongruence），削弱整体体验甚至引发抵触。
+
+在 GenAI 设计应用迅速扩展的当下，新的用户问题与设计范式不断涌现，传统关于情绪契合的单一理论难以全面解释生成式设计所面临的复杂情境。因此，本文中的 Emotion alignment 被界定为一个复合性概念（见Table 1）。它不仅涉及技术层面的对齐——如语义向量与情绪向量的映射、生成策略与素材库的匹配，还包含审美心理学中关于“形式与情绪框架契合”的机制、消费心理学中关于“色彩与情绪联想”的规律，以及设计研究中对“emotional congruence”的实践性探索。换言之，Emotion alignment 在本文范围内指向一个跨学科的综合过程：它要求生成式 AI 在 用户意图理解—生产策略制定—成果情绪体验 的全链路中，实现与用户情绪预期的动态契合。
+
+% Table 4 Literature overview of Emotion Alignment
+
+\section{Intentions}
+
+\subsection{Design attractiveness}
+
+Design attractiveness 并非一个常用术语，相关研究多以 product attractiveness、visual attractiveness 等概念探讨产品外观、审美品质或符号意义这些单一维度的属性对消费者的影响。为便于讨论，本研究对花艺礼品设计的评估采用 Design attractiveness，以统括花材、配色、象征意义与整体设计风格等直接影响消费者喜好的要素。对花艺礼品这类装饰性与情感价值突出的消费品设计而言，设计吸引力不仅是消费者决策的起点，也是推动情绪体验向购买意向转化的核心因素（Jordan, 2000; Norman, 2004; Tractinsky et al., 2000）。
+
+早期，Holbrook 的一系列工作较早地关注到消费品的非功能属性，他的主张可以主要分为两个方面：
+
+1）提出“审美义务”（esthetic imperative），主张消费者研究不能仅停留在功能和效用层面，而必须重视产品的审美性特征 (Holbrook, 1981)。这一视角强调色彩、比例和造型等形式特征在消费者认知与态度形成中的重要作用（Holbrook, 1986; DeLong, 1987; Veryzer, 1995）。这一转向使产品设计与美学逐渐成为消费心理学与市场营销研究的重要议题。
+
+2）产品除了实用与审美之外，同样承载象征性意义（symbolic value），通过符号系统来影响消费者的社会身份与人际关系建构（Holbrook,1986）。这一符号学取向为后续 McCracken (1986) 的“文化与消费”理论、Holt (2004) 的品牌文化研究提供了重要启发。
+
+在此基础上，学界开始探索如何以实证方式操作化“设计吸引力”。以 Eckman 与 Wagner (1994) 为代表的研究，通过 conjoint analysis（联合分析） 将产品的轮廓、图案与比例等视觉特征转化为可测量变量，以男士服装为例验证了不同视觉特征对吸引力评价的权重；后续研究则进一步在食品包装、饮料容器、化妆品外盒等消费品类目，借助实验范式、问卷调查以及神经科学方法，识别出色彩、图形与信息呈现等设计元素对消费者判断的差异化作用（Silayoi \& Speece, 2007; Ampuero, O., \& Vila, N.,2006., 2010; Shi et al., 2021）。尽管上述研究关注的视觉因素和操作方法各有侧重，但核心共识在于：设计吸引力并非单纯的附属特质，而是直接影响消费者态度与选择的关键要素。
+
+产品理论领域，Bloch, P. H.较早地系统讨论了类似的概念，即产品外观在消费者认知与偏好形成中的作用。该研究提出A Model of Consumer Responses to Product Form（见 Figure 4）,强调外观作为“无声的销售员”（silent salesman），能够在第一时间吸引注意力、传递质量感并塑造品牌印象。他强调，产品的理想形式（ideal form）理想形式是能够在唤起积极信念、积极情感和接近反应方面优于其他选择的形式。而产品形式不仅影响审美愉悦，还直接作用于消费者的态度与购买意向。Veryzer (1995) 在综述中进一步指出，产品设计与美学在消费者研究中长期被低估，而视觉形式本身就是消费者认知与决策的重要线索。此类研究将“设计吸引力”确立为消费心理学和市场营销中不可忽视的维度。
+
+\begin{figure}[htbp]
+
+  \centering
+
+  % TODO: insert figure file
+
+  % \includegraphics[width=0.9\textwidth]{figures/your_figure_file}
+
+  \caption{Figure 4 : A Model of Consumer Responses to Product Form (redrawn from Bloch, 1995).The original framework is faithfully reproduced, with the path most relevant to design attractiveness—product form → affective responses → behavioral responses—highlighted, while other components are shown in reduced opacity for clarity.}
+
+  \label{fig:figure_4_a_model_of_consumer_responses_t}
+
+\end{figure}
+
+在用户体验与人机交互领域，Tractinsky 等 (2000) 的实证研究则提出“美即是可用”（what is beautiful is usable），表明吸引力不仅是一种附属评价，而会迁移到功能性和可用性的整体判断中。Lavie 与 Tractinsky (2004) 进一步将视觉美学划分为“经典美学”和“表现美学”两个维度，说明设计吸引力既源于秩序与简洁，也依赖创造性与独特性。Norman (2004) 将设计吸引力归入“本能层设计”（visceral design），强调外观和第一印象在用户情绪体验中的关键作用；Jordan (2000) 的“愉悦设计”模型则指出，吸引力往往来自超越功能性的愉悦和情感满足。
+
+综合上述脉络与理论视角，本文将设计吸引力界定为：产品或设计成果通过形式特征、美学品质与符号意义所引发的积极注意、兴趣与偏好，并在情感性消费品（如花艺礼品）的决策过程中发挥关键作用。具体到本研究框架中，花艺礼品的设计吸引力由以下特征构成：花礼的花材、配色、象征意义、整体设计风格等一系列直接影响消费者喜好度的设计考量。设计吸引力被视为影响消费者对花艺礼品等情感性消费品态度与决策的关键要素。它不仅作为消费者决策的起点（first impression driver），还可能在 情绪契合（emotion alignment） 与 采纳意愿（Adoption Intentions） 之间发挥中介作用，从而成为解释生成式设计在消费场景中有效性的核心变量。
+
+\begin{figure}[htbp]
+
+  \centering
+
+  % TODO: insert figure file
+
+  % \includegraphics[width=0.9\textwidth]{figures/your_figure_file}
+
+  \caption{Figure 5: Four major research perspectives on design attractiveness: Product Form \& Aesthetic Value, User Experience \& Emotional Design, Consumer Research \& Empirical Methods, and Semiotics \& Cultural Value.}
+
+  \label{fig:figure_5_four_major_research_perspective}
+
+\end{figure}
+
+\subsection{Adoption Intentions}
+
+提升用户对生成式人工智能（Generative AI, GenAI）驱动设计成果的采纳意愿，是理解其在情感性消费品设计语境中作用机制的关键目标。采纳意愿（Adoption Intentions）通常被界定为个体在认知与情感层面上，愿意接受某一技术、产品或创新成果作为可靠或理想使用选项的心理准备程度（Davis, 1989; Rogers, 2003; Venkatesh et al., 2003）。在生成式设计研究中，这一概念不仅涉及对AI工具的接受，更指向用户对AI生成结果本身的接受与信任（Longoni et al., 2019; Li et al., 2025）。
+
+近来的研究和调查多侧重不同群体的用户（一般用户、专业设计师、企业管理层）等对新的AI技术应用产品的接受度（Kim et al., 2024; Li et al., 2025; Dwivedi et al., 2021）。常见的技术接受评估理论框架包括：Fred D.Davis的技术接受模型（Technology Acceptance Model, TAM）（Davis, 1989）、统一技术接受与使用理论（Unified Theory of Acceptance and Use of Technology, UTAUT）（Venkatesh et al., 2003）及其扩展版本 UTAUT2（Venkatesh et al., 2012）、计划行为理论（Theory of Planned Behavior, TPB）（Ajzen, 1991）、社会认知理论（Social Cognitive Theory, SCT）（Bandura, 1986）以及期望确认模型（Expectation–Confirmation Model, ECM）（Bhattacherjee, 2001）等。以TAM为例，该模型强调，用户的采纳意愿主要由“感知有用性（Perceived Usefulness, PU）”和“感知易用性（Perceived Ease of Use, PEOU）”所决定（Davis, 1989）。如Figure 6所示，PEOU强调技术结果能否提升个体绩效与体验价值，PU强调系统交互是否简洁可控。在生成式AI驱动的设计活动中，这两个变量的解释内涵相应扩展：感知有用性可理解为生成结果在功能性、创意性与审美质量上的综合效用感，而感知易用性则体现为系统输出的可预测性、操作界面友好度与生成逻辑的可理解性（Venkatesh \& Davis, 2000; Chatterjee et al., 2021）。
+
+\begin{figure}[htbp]
+
+  \centering
+
+  % TODO: insert figure file
+
+  % \includegraphics[width=0.9\textwidth]{figures/your_figure_file}
+
+  \caption{Figure 6 Technology Acceptance Model (TAM, Davis. 1989)Note. Redrawn based on Davis (1989). Element definitions are derived from the original publication, illustrating the relationships among Perceived Usefulness (PU), Perceived Ease of Use (PEOU), Behavioral Intention (BI), and Actual System Use.}
+
+  \label{fig:figure_6_technology_acceptance_model_tam}
+
+\end{figure}
+
+类似的， UTAUT 整合了TAM等8个信息技术模型的核心构念（如Table 2所示），提出用户的采纳意愿主要受到绩效期望（Performance Expectancy）、努力期望（Effort Expectancy）、社会影响（Social Influence）以及促进条件（Facilitating Conditions）四个因素的共同作用（Venkatesh et al., 2003）。其中，绩效期望反映个体认为使用该技术可以帮助其实现预期目标的程度，与感知有用性具有一定对应关系；努力期望则指使用该技术的易用程度，与感知易用性相近。社会影响强调个体在采纳新技术时受到他人（如同事、管理层或社群）的态度和行为影响，而促进条件则描述组织或环境中支持个体有效使用技术的资源与基础设施（Venkatesh et al., 2012）。这些构念的加入，使UTAUT模型能够更全面地解释技术接受行为，特别是在团队协作或组织采纳等社会性较强的情境下，能捕捉到外部社会规范与支持系统对个体采纳意愿的作用。
+
+\begin{figure}[htbp]
+
+  \centering
+
+  % TODO: insert figure file
+
+  % \includegraphics[width=0.9\textwidth]{figures/your_figure_file}
+
+  \caption{Table 5 Common Theoretical Frameworks for Technology Acceptance Evaluation}
+
+  \label{fig:table_5_common_theoretical_frameworks_fo}
+
+\end{figure}
+
+\begin{figure}[htbp]
+
+  \centering
+
+  % TODO: insert figure file
+
+  % \includegraphics[width=0.9\textwidth]{figures/your_figure_file}
+
+  \caption{Figure 7 Unified Theory of Acceptance and Use of Technology (UTAUT, Venkatesh, 2003)Note. Redrawn based on Venkatesh et al. (2003). The figure illustrates the relationships among four core constructs—Performance Expectancy, Effort Expectancy, Social Influence, and Facilitating Conditions—and four moderating variables (Gender, Age, Experience, and Voluntariness of Use) that jointly explain Behavioral Intention and Use Behavior.}
+
+  \label{fig:figure_7_unified_theory_of_acceptance_an}
+
+\end{figure}
+
+基于上述理论，已有大量实证研究从不同使用群体的视角探讨了AI技术的接受与采纳行为。研究发现，绩效期望与感知有用性在解释用户对AI技术及其输出结果的态度中始终处于核心地位。Kim 等（2024）基于UTAUT模型指出，在企业环境中，绩效期望、努力期望与组织支持共同影响员工对生成式AI系统的采纳意愿。Li 等（2025）结合TAM与任务–技术契合模型（Task–Technology Fit, TTF），发现设计师的采纳意愿主要受感知有用性与任务契合度驱动，而社会影响与组织支持在其中发挥调节作用。Dwivedi 等（2021）对跨行业样本的研究亦表明，在AI产品和应用的接受度模型中，绩效期望与感知有用性 consistently emerge as the most significant determinants of adoption intention。类似的结论也出现在教育与创意产业场景中，如Tian 等（2024）和Aldulaimi 等（2025）分别在AI聊天机器人和AI教学工具的研究中验证了感知有用性、易用性与绩效期望对用户满意度和持续使用意愿的显著作用。
+
+这些研究共同揭示，效益预期类因素（benefit-expectancy factors）——包括感知有用性（PU）、绩效期望（PE）以及任务–技术契合（TTF）——是影响AI技术采纳及结果满意度的核心机制（Davis, 1989; Venkatesh et al., 2003; Goodhue \& Thompson, 1995）。在传统的信息系统领域，这些变量通常用于衡量技术在提升任务绩效或生产效率方面的效能；而在生成式AI语境下，其内涵逐渐扩展为用户对AI生成成果在创意、审美与适用性方面的综合感知（Song, 2025; Singh, 2024）。研究者指出，当生成结果被认为具有较高的设计价值、创新潜能或情绪契合度时，个体的采纳意愿和满意度显著增强（Desmet \& Hekkert, 2007; Chitturi et al., 2007; Su \& Wang, 2024）。因此，绩效期望与感知有用性在此可被视为“结果性效益预期”的体现，即用户基于生成成果的功能性与感性价值形成采纳判断（Venkatesh et al., 2012; Li et al., 2025）。
+
+综上所述，本文重点关注现有技术采纳理论框架中与结果评价密切相关的认知维度，以探讨用户如何通过对AI生成设计成果的感知价值判断形成采纳意愿。该视角为理解生成式AI在设计评估与情感性消费品领域的接受机制提供了理论支点。
+
+\section{Research Design}
+
+为了清晰、科学地操作上述变量和概念，本文进一步梳理了与 Research design 相关的方法基础。首先，将 4-a）Floral Gift Design as Research Context 作为研究情境加以界定，以避免场景泛化带来的干扰。本章还结合既有研究，对 4-b）Quantitative Measures and Task Design 与 4-c）Qualitative Inquiry and Mixed-Methods Integration 所涉及的测量方式、任务设置及证据整合思路进行了整理，以形成与本研究问题相匹配的方法路径；同时，本章进一步引入 4-d）Generative Systems: Controllability \& Bias，以为后续对以人类基准的生成结果差异的理解与解释提供方法背景。
+
+\subsection{Floral Gift Design as Research Context}
+
+在本文中，floral gift的定义和flower arrangement有所区分，前者更偏向创作者的自我表达与审美意趣；后者则强调面向既定应用环境与应用目的，组织花材与配件以形成具有实用性价值的作品。基于这种区分，礼品花艺可以被理解为花艺设计中的一个商品化分支：以送礼与陈设为导向，服务特定用户群体与场合。据此，本文将floral gifts定义为：以花卉及植物材料为主要表达媒介、以送礼/陈设为核心用途、并通常伴随容器或包装结构以便携带与展示的花艺产品。其典型特征是体量相对较小、附加值较高，并可按包装与展示方式归纳为花束/花篮、礼盒型花艺以及与照片/画作/微景观等形式结合的复合型礼品花艺。
+
+Sesson 1.3阐述了选择floral gifts作为实验验证对象的具体原因，即floral gifts是一种情感与社会信息显著的载体.
+
+\subsection{Quantitative Measures and Task Design}
+
+目的：决定量表与任务，为中介与功效分析打底。要点：
+
+\begin{itemize}
+
+  \item 情绪契合与吸引力的量表选型与锚定方式（7 点、语义锚）
+
+  \item 采纳意愿任务（单题/多题、行为近似指标）
+
+  \item 分析思路：中介（alignment → attractiveness → adoption）、组间比较产出：表 2.5 变量—量表—任务—分析 对齐表；功效分析前置参数
+
+\end{itemize}
+
+\subsection{Colour Representation \& Measurement}
+
+目的：确定颜色表征与提取方案。要点：
+
+\begin{itemize}
+
+  \item 选用 CIELAB/CIELCH 的理由与成像/显示条件约束
+
+  \item P–S–A 提取流程（吸色管/聚类/阈值）、量化口径（像素占比、权重）
+
+  \item 颜色清洗与归一化（白点、γ、背景）产出：图 2.1 提取流程图；表 2.2 特征清单（纳入/排除、阈值）
+
+\end{itemize}
+
+\subsection{Qualitative and Mixed-Methods for Contextual Emotion and Usability}
+
+Semi-structured Interviews for Emotion \& Adoption
+
+目的：为情绪词表、情绪契合度解释与采纳意愿动因提供一手证据，并服务于 Formative 与 Study 1 的任务设计。内容要点：
+
+\begin{itemize}
+
+  \item 适用场景：Formative（词表生成与删改、量表措辞与锚点验证）、Study 1（对量化评分的“原因”与“例外”做解释）。
+
+  \item 抽样与饱和：目的性抽样覆盖关系语境（恋人/家人/朋友/同事）、场景（生日/慰问/致谢/道歉等），每子群 6–8 人起，全样 15–24 人，以主题饱和为停招规则。
+
+  \item 访谈提纲结构：
+
+  \item 热身：最近一次送花/收花经历与目标情绪；
+
+  \item 配色线索：对色相/明度/饱和度与主–辅–点缀的直觉与规则；
+
+  \item 三元比较（triads）：三套调色板中哪一套更契合目标情绪，为什么；
+
+  \item 对齐失败案例：好看但不想选/想选但不合适的原因（季节/关系语义/礼仪规范）；
+
+  \item 采纳意愿：从“喜欢”到“会选”的触发点与阻断点。
+
+  \item 资料与伦理：录音转写、匿名化、允许引用短句。
+
+\end{itemize}
+
+产出物：
+
+\begin{itemize}
+
+  \item 表 2.6A 访谈方案与停招规则（样本构成、饱和判据、时长、设备）
+
+  \item 附录 A 访谈提纲（可直接在 3 章复用）
+
+\end{itemize}
+
+Thematic Analysis and Reliability
+
+目的：规范编码流程与信度，确保定性证据可复现、可与量化对齐。内容要点：
+
+\begin{itemize}
+
+  \item 分析流程（建议 thematic analysis 的六步法，简述到位即可）：熟悉资料 → 初始编码 → 主题归并 → 审核 → 命名 → 报告。
+
+  \item 编码本（codebook）：父主题建议包括：
+
+  \item 关系与礼仪语境（occasion norms, tie strength）
+
+  \item 颜色语义与情绪线索（hue warmth, lightness, saturation; contrast/harmony）
+
+  \item 调色板结构与权重（primary–secondary–accent）
+
+  \item 失配类型（seasonality over-fit, relationship semantics attenuated, too loud/subdued）
+
+  \item 从喜欢到采用的桥接因素（appropriateness, perceived risk, message clarity）
+
+  \item 双人编码与一致性：20–30\% 样本双编码，报告 Cohen’s κ 或 Krippendorff’s α ≥ 0.70；分歧通过讨论—修订编码本解决。
+
+  \item 证据呈现：主题定义 + 代表性引述 + 与量化变量的映射（见下一小节）。
+
+\end{itemize}
+
+产出物：
+
+\begin{itemize}
+
+  \item 表 2.6B 主题—操作化—示例引述—量化映射
+
+  \item 附录 B 编码本 v1.0（节点、定义、包含/排除准则）
+
+\end{itemize}
+
+Mixed-Methods Integration Strategy (QUAL→QUAN / QUAN→QUAL)
+
+目的：规定定性—量化的衔接方式，让 3 章与 4 章的设计“有法可依”。内容要点：
+
+\begin{itemize}
+
+  \item 设计型式：
+
+  \item Exploratory sequential (QUAL→QUAN)：用访谈产出情绪词表、量表锚点与失配类型，再据此构建量化指标（如“季节性失配度”= 当前 h° 与该场景规范色簇中心的角度差）。
+
+  \item Explanatory sequential (QUAN→QUAL)：对量化结果中的反常样本进行回访解释（为何“吸引力高但不采用”）。
+
+  \item Convergent：在关键结论处用joint display并置呈现定性主题与量化统计（示例见下）。
+
+  \item 整合工具：
+
+  \item Joint display 矩阵（主题 ↔ 指标 ↔ 统计结果 ↔ 设计含义）
+
+  \item 中介路径的质性佐证（“alignment→attractiveness→adopt”每一箭头的质性证据）
+
+\end{itemize}
+
+Usability \& Promptability Checks for GenAI Recolouring
+
+目的：为 3 章的可控生成与可用性测试提供方法学依据。内容要点：
+
+\begin{itemize}
+
+  \item 评估维度：
+
+  \item Promptability：目标h°/L*/C* 命中率、P–S–A 可控度（可定义为主色预测占比≥阈值）；
+
+  \item Repeatability：同一提示词的试次内/跨日一致性；
+
+  \item Explainability：输出与提示词的对应可解释性（被试能否说出“变动来自何项提示”）。
+
+  \item 任务与记录：小样本网格（prompt × 参数），对每张图记录目标–实际差值、失败类型标签（偏色、层次丢失、溢出）。
+
+  \item 与定性结合：在可用性访谈中加入think-aloud与cognitive walkthrough，记录用户如何理解提示词与失败反馈。
+
+\end{itemize}
+
+产出物：
+
+\begin{itemize}
+
+  \item 表 2.6D Promptability/Usability 评估指标与阈值
+
+  \item 附录 C 可控度测试表格与评分规则
+
+\end{itemize}
+
+\subsection{Generative Systems: Controllability \& Bias}
+
+目的：说明为什么需要人类基准与生成式对照。要点：
+
+\begin{itemize}
+
+  \item 语义可控≠情感可控；常见偏差：季节性过拟合、关系语义弱化
+
+  \item 评测与校正范式：人类基准↔GenAI、可控提示词与参数产出：表 2.6 GenAI 偏差→诊断指标→校正策略（为 3 章做准备）
+
+\end{itemize}
+
+\section{Summary}
