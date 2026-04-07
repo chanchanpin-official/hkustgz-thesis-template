@@ -80,6 +80,26 @@
 3. 将 **编译器** 从 "pdfLaTeX" 改为 **"XeLaTeX"**
 4. 重新编译项目
 
+### Overleaf 中文渲染（常见问题排查）
+
+如果你已经切到 XeLaTeX，但中文仍显示方框/空白，可以按下面检查：
+
+1. **确认文件编码是 UTF-8**：在本地编辑器保存为 UTF-8 后再上传到 Overleaf。
+2. **先用模板默认字体配置**：不要删除 `template/config/01-fonts.tex` 里的 `xeCJK` 和 CJK 字体回退逻辑。
+3. **避免在正文手动加载冲突宏包**：例如不要再手动 `\usepackage{CJK}`（会与 `xeCJK` 思路冲突）。
+4. **最稳妥的 Overleaf 字体选择**：在 `template/config/01-fonts.tex` 里将 CJK 主字体固定成 Fandol（TeX Live/Overleaf 默认可用）：
+
+```latex
+% 在 \\RequirePackage{xeCJK} 之后添加或替换
+\setCJKmainfont{FandolSong-Regular}
+\setCJKsansfont{FandolHei-Regular}
+\setCJKmonofont{FandolFang-Regular}
+```
+
+5. **清理缓存再编译**：Overleaf 菜单里选择 *Recompile from scratch*。
+
+> 提示：这个模板本身就是为 XeLaTeX + xeCJK 设计的。只要编译器正确、字体可用，中文一般可直接渲染。
+
 ### 本地编译
 
 ```bash
